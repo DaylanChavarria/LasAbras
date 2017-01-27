@@ -88,7 +88,7 @@
 		<div class="gtco-container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2 class="cursive-font primary-color">Quesos / Otros Productos</h2>
+					<h2 class="cursive-font primary-color">Quesos y Otros Productos</h2>
 					<p>En esta parte la idea es que sea dinámico por parametros se le envía si es de quesos o de otro producto para ser cargados</p>
 				</div>
 			</div>
