@@ -110,13 +110,8 @@
                         <a href="#" data-nav-section="reservation">Contáctenos</a>
                         <a href="#" data-nav-section="localizacion">Localización</a>
 
-
                         <a data-toggle="modal" href="#modalSesion" class="glyphicon glyphicon-log-in" data-toggle="tooltip" data-placement="bottom" title="Iniciar Sesión">
                         </a>
-
-                    
-
-                          
                     </div>
                 </div>
 
@@ -125,6 +120,10 @@
 
         <div id="fh5co-about" data-section="about">
             <div class="fh5co-2col fh5co-text">
+                <!-- Test CRUD Empresa -->
+                <a href="./Presentation/Admin/CRUD_Empresa.php">Test CRUD Empresa</a>
+                <!-- Fin de Test de CRUD Empresa -->
+                
                 <h2 class="heading to-animate">Historia</h2>
                 <p class="to-animate"><span class="firstcharacter">H</span>ace 20 años inició un sueño con una pequeña finca y unas pocas vacas. Empezó una travesía y curiosidad sobre el proceso de la leche. La ilusión de superarse y la perseverancia lograron una realidad: dar el primer paso en el arte de hacer queso.
                 </p>
