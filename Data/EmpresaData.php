@@ -44,28 +44,25 @@
 		{
 			$conn = new mysqli($this->server, $this->user, $this->password, $this->db);
 	        $conn->set_charset('utf8');
-	        $query = "select * from la_empresa";
+	        $query = "select * from la_empresa where atIdioma = " . $idioma;
 	        $result = mysqli_query($conn, $query);
 	        mysqli_close($conn);
-	        $array = [];
-	        while ($row = mysqli_fetch_array($result)) {
+	        if ($row = mysqli_fetch_array($result)) {
 	            $miEmpresa = new  Empresa($row['atId'], $row['atHistoria'], $row['atQuinesSomos'],
 	            $row['atDescripcionGaleria'], $row['atElaboracion'], $row['atDescripcionProductoA'],
 		        $row['atElaboracionProductoB'], $row['atDenominacion'], $row['atDescripcionContactos'],
 		        $row['atDireccion'], $row['atCorreo'], $row['atTelefonoA'], $row['atTelefonoB'], 
 		        $row['atEncargadoA'], $row['atEncargadoB'], $row['atMision'], $row['atVision'],
 		        $row['atIdioma']);
-
-	            array_push($array, $miEmpresa);
 	        }
-	        return $array[$idioma];
+	        return $miEmpresa;
 		}
 
 		//Actualiza la información de la empresa
 		private function actualizaEmpresaData($empresa, $idioma){
 			$conn = new mysqli($this->server, $this->user, $this->password, $this->db);
 	        $conn->set_charset('utf8');
-	        $query = "call updateEmpresa(0, '" . $empresa->correo . "', '" . $empresa->denominacion . "', '" .
+	        $query = "call ActualizarEmpresa(0, '" . $empresa->correo . "', '" . $empresa->denominacion . "', '" .
 	        	$empresa->descripcionContactos ."', '" . $empresa->descripcionGaleria . "', '" .
 	        	$empresa->descripcionProductoA . "', '" . $empresa->direccion . "', '" . $empresa->elaboracion .
 	        	"', '" . $empresa->elaboracionProductoB . "', '" . $empresa->encargadoA .

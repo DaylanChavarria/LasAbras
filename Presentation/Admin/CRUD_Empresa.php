@@ -7,6 +7,7 @@
     </head>
     <body>
         <a href="../../index.php"><h3>Inicio</h3></a>
+        <a href="./CRUD_Producto.php"> CRUD Producto </a>
         <h2>Empresa &rarr;listado</h2>
         <br>
         <?php

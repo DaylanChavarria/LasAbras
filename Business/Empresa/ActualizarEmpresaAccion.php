@@ -32,8 +32,10 @@
 		$vision = $_POST['vision'];
 		$idioma = $_POST['idioma'];
 
-		/*Una ves que se asegura que se recibieron los datos deseados, se validan campos vacios o
-		datos no numericos en campos numericos. */
+		/*
+		* Una ves que se asegura que se recibieron los datos deseados, se validan campos vacios o
+		* datos no numericos en campos numericos. 
+		*/
 
 		//Se hace el llamado a la funcion que valida campos vacios.
 		$resultValidaVacios = $instValidaciones->validaVacios(
